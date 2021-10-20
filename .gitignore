@@ -1,0 +1,6 @@
+#git ignore files
+
+.idea/
+GamblingStimulation.iml
+out/
+       
