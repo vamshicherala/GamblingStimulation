@@ -13,12 +13,17 @@ public class GamblingStimulation {
     int stake = 100;
     int winOrLoss() {
         final int everyDayBet = 1;
+        int die = 0;
+        int loss = stake/2;
+        int profit = loss+stake;
         Random r1 = new Random();
-        int die = r1.nextInt(2);
-        if (die ==1){
-            stake = stake+everyDayBet;
-        }else {
-            stake = stake-everyDayBet;
+        while (stake>loss && stake<profit){
+            die = r1.nextInt(2);
+            if (die == 1) {
+                stake = stake + everyDayBet;
+            } else {
+                stake = stake - everyDayBet;
+            }
         }
         return(stake);
     }
